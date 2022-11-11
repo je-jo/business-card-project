@@ -4,17 +4,18 @@ body {
         "header" auto
         "main" 1fr
         "footer" auto;
+    position: relative;
     min-height: 100vh;
+    width: min(100%, 1000px);
+    margin: 0 auto;
     padding: 2.125rem 1.5rem 48px;
-    font-family: sans-serif;
+    font-family: $ff-sans-serif;
     font-size: 100%;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     background: transparent url(../images/bg-mobile.svg) 0% 0%/cover no-repeat;
-}
 
-@media screen and (min-width: 48rem) {
-    body {
+    @media screen and (min-width: 48rem) {
         padding: 3.75rem 5.25rem;
         background: transparent url(../images/bg-desktop.svg) 0% 0%/cover no-repeat;
         grid-template:
@@ -26,10 +27,8 @@ body {
 header {
     grid-area: header;
     padding-bottom: 3.25rem;
-}
 
-@media screen and (min-width: 48rem) {
-    header {
+    @media screen and (min-width: 48rem) {
         padding-bottom: 7rem;
     }
 }
@@ -39,40 +38,36 @@ main {
     display: flex;
     flex-direction: column;
     gap: 5.5rem;
-}
 
-@media screen and (min-width: 48rem) {
-    main {
+    @media screen and (min-width: 48rem) {
         gap: 9.3rem;
     }
 }
 
 picture {
-    // background-color: hsla(352, 36%, 44%, 0.521);
+    //background-color: hsla(352, 36%, 44%, 0.521);
     width: 283px;
     height: 410px;
     position: absolute;
     bottom: 0;
     right: 0;
-}
+    z-index: -100;
 
-@media screen and (min-width: 48rem) {
-    picture {
+    @media screen and (min-width: 48rem) {
         width: 436px;
         height: 631px;
-        right: 20%;
+        right: 15%;
     }
 }
 
 footer {
     grid-area: footer;
-    display: flex;
+    // display: flex;
 }
 
 .social {
-    flex-grow: 1;
     display: flex;
-    justify-content: space-between;
+    gap: 3rem; 
 }
 
 ul {
@@ -85,9 +80,7 @@ ul {
     .social {
         text-align: right;
         writing-mode: vertical-rl;
-        align-self: flex-end;
-        display: flex;
-        gap: 3rem;
+        // align-self: flex-end;  
     }
 }
 
