@@ -83,7 +83,7 @@ main {
   }
 }
 
-picture {
+picture img {
   width: 283px;
   height: 410px;
   position: absolute;
@@ -92,7 +92,7 @@ picture {
   z-index: -100;
 }
 @media screen and (min-width: 48rem) {
-  picture {
+  picture img {
     width: 436px;
     height: 631px;
     right: 15%;

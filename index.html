@@ -36,10 +36,21 @@
             </address>
         </div>
         <picture>
-            <source type="image/avif" srcset="assets/images/person2x.avif" media="(min-width: 48rem)" width="436"
-                height="631">
-            <source type="image/avif" srcset="assets/images/person.avif" width="283" height="410">
-            <img src="assets/images/person.png" alt="a confident looking business woman" width="283" height="410">
+            <source 
+            type="image/avif" 
+            srcset="
+                    assets/images/person2x.avif 436w,
+                    assets/images/person.avif 283w" 
+            sizes="100vw">
+            <img 
+            src="assets/images/person.png"
+            srcset="
+                    assets/images/person2x.png 436w,
+                    assets/images/person.png 283w" 
+            sizes="100vw" 
+            alt="a confident looking business woman"
+            width="283" 
+            height="410">
         </picture>
     </main>
     <footer>
