@@ -8,46 +8,62 @@
     <meta name="description" content="A solution to a front-end challenge - a responsive business card">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="stylesheet" href="assets/sass/main.css">
-    <title>A Front-End Project | BigsonDev Business Card</title>
+    <title>BigsonDev Business Card | A Front-End Project</title>
 </head>
 
 <body>
     <header>
-        <p class="header__title"><span class="line"></span>Portfolio</p>
+        <p class="text-logo">Portfolio</p>
     </header>
     <main>
-        <div class="intro">
-            <p>Hello, I’m</p>
-            <h1>Allie Grater<span class="subtitle">UX/UI & Graphic Designer</span></h1>
-            <p>Huge design enthusiast. I love what I do and my clients too.</p>
+        <div class="wrapper-intro">
+            <h1>
+                <span class="text-lead">Hello, I’m</span>
+                <span class="text-header">Allie Grater</span>
+                <span class="text-subtitle">UX/UI & Graphic Designer</span>
+            </h1>
+            <p class="text-para">Huge design enthusiast. I love what I do and my clients too.</p>
         </div>
-        <div class="contact">
-            <h2 class="title"><span class="line"></span>Contact</h2>
-            <h3>Email</h3>
-            <address>helllo@grater.design</address>
-            <h3>Phone</h3>
-            <address>+90 12345 54321</address>
+        <div class="wrapper-contact">
+            <h2 class="text-title">Contact</h2>
+            <h3 class="text-title">Email</h3>
+            <address>
+                <a href="mailto:helllo@grater.design">helllo@grater.design</a>
+            </address>
+            <h3 class="text-title">Phone</h3>
+            <address>
+                <a href="tel:+901234554321">+90 12345 54321</a>
+            </address>
         </div>
         <picture>
-            <source srcset="assets/images/person2x.png" media="(min-width: 48rem)">
-            <img src="assets/images/person.png" alt="a confident looking business woman">
+            <source type="image/avif" srcset="assets/images/person2x.avif" media="(min-width: 48rem)" width="436"
+                height="631">
+            <source type="image/avif" srcset="assets/images/person.avif" width="283" height="410">
+            <img src="assets/images/person.png" alt="a confident looking business woman" width="283" height="410">
         </picture>
     </main>
     <footer>
-        <div class="social">
-            <p class="find">Find me on<span class="line"></span></p>
+        <div class="wrapper-social">
+            <p class="text-find">Find me on</p>
             <ul>
-                <li><a href=""></a>in</li>
-                <li><a href=""></a>be</li>
-                <li><a href=""></a>dr</li>
+                <li><a href="" target="_blank" aria-label="link to linkedin profile"><img
+                            src="assets/images/fa-linkedin.svg" alt="" aria-hidden="true" width="24" height="24"
+                            aria-label="link to linkedinprofile"></a></li>
+                <li><a href="" target="_blank" aria-label="link to behance profile"><img src="assets/images/behance.svg"
+                            alt="" aria-hidden="true" width="24" height="24"></a></li>
+                <li><a href="" target="_blank" aria-label="link to dribble profile"><img
+                            src="assets/images/fa-dribbble.svg" alt="" aria-hidden="true" width="24" height="24"></a>
+                </li>
             </ul>
         </div>
 
-        <p class="attribution"><small>
+        <p class="attribution">
+            <small>
                 Challenge by <a href="https://bigsondev.com/projects/business-card-project/"
                     target="_blank">BigsonDev</a>. Coded by <a href="https://github.com/je-jo" target="_blank">Jelena
                     Jovicic</a>, 2022.
-            </small></p>
+            </small>
+        </p>
     </footer>
 </body>
 

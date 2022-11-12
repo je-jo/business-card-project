@@ -101,11 +101,19 @@ picture {
 
 footer {
   grid-area: footer;
+  align-self: end;
 }
 
-.social {
+.wrapper-social {
   display: flex;
   gap: 3rem;
+}
+@media screen and (min-width: 48rem) {
+  .wrapper-social {
+    text-align: right;
+    -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+  }
 }
 
 ul {
@@ -114,13 +122,6 @@ ul {
   gap: 2rem;
 }
 
-@media screen and (min-width: 48rem) {
-  .social {
-    text-align: right;
-    -ms-writing-mode: tb-rl;
-        writing-mode: vertical-rl;
-  }
-}
 .attribution {
   position: absolute;
   bottom: 0;
@@ -145,10 +146,6 @@ ul {
   margin-left: 48px;
 }
 
-.subtitle {
-  display: block;
-}
-
 .find {
   position: relative;
 }
@@ -156,6 +153,10 @@ ul {
 .find > .line {
   right: 0;
   margin-right: -48px;
+}
+
+h1 > * {
+  display: block;
 }
 
 .sr-only {

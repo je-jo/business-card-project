@@ -17,6 +17,7 @@ body {
 
     @media screen and (min-width: 48rem) {
         padding: 3.75rem 5.25rem;
+        // padding: 3.75rem 1.5rem;
         background: transparent url(../images/bg-desktop.svg) 0% 0%/cover no-repeat;
         grid-template:
             "header footer" auto
@@ -62,26 +63,23 @@ picture {
 
 footer {
     grid-area: footer;
-    // display: flex;
+    align-self: end;
 }
 
-.social {
+.wrapper-social {
     display: flex;
-    gap: 3rem; 
+    gap: 3rem;
+
+    @media screen and (min-width: 48rem) {
+        text-align: right;
+        writing-mode: vertical-rl;
+    }
 }
 
 ul {
     display: flex;
     list-style: none;
     gap: 2rem;
-}
-
-@media screen and (min-width: 48rem) {
-    .social {
-        text-align: right;
-        writing-mode: vertical-rl;
-        // align-self: flex-end;  
-    }
 }
 
 .attribution {

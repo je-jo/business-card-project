@@ -14,10 +14,6 @@
     margin-left: 48px;
 }
 
-.subtitle {
-    display: block;
-}
-
 .find {
     position: relative;
 }
@@ -26,3 +22,12 @@
     right: 0;
     margin-right: -48px;
 }
+
+// .subtitle {
+//     display: block;
+// }
+
+h1>* {
+    display: block;
+}
+
