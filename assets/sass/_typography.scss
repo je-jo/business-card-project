@@ -1,33 +1,83 @@
-.line {
+.text-logo {
+    color: $clr-black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.text-lead {
     display: block;
+    font-family: $ff-sans-serif;
+    color: $clr-primary;
+    font-size: 18px;
+}
+
+h1 .text-header {
+    font-family: $ff-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #000000CC;
+}
+
+.text-subtitle {
+    display: block;
+    font-size: 19px;
+}
+
+.text-para,
+address>a {
+    all: unset;
+    font-style: normal;
+    color: inherit;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.text-title {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.text-find {
+    color: $clr-white;
+}
+
+
+
+//Line
+
+@mixin line {
+    content: "";
     position: absolute;
-    top: -50%;
-    width: 40px;
-    height: 100%;
-    border-bottom: 1px solid #707070;
-    margin-left: -48px;
+    inset-block-start: -50%; //from top
+    inline-size: 40px; //physical width
+    block-size: 100%; //physical height
+    border-block-end: 1px solid #707070;
+    //background-color: yellow;
 }
 
-.header__title,
-.title {
+.text-logo,
+h2.text-title {
     position: relative;
-    margin-left: 48px;
+    margin-inline-start: 48px;
 }
 
-.find {
+.text-find {
     position: relative;
 }
 
-.find>.line {
-    right: 0;
-    margin-right: -48px;
+.text-logo::before,
+h2.text-title::before {
+    @include line();
+    margin-inline-start: -48px;
 }
 
-// .subtitle {
-//     display: block;
-// }
-
-h1>* {
-    display: block;
+.text-find::after {
+    @include line();
+    margin-inline-start: 16px;
 }
+
+
+
+
+
 
