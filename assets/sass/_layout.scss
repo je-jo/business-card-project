@@ -36,25 +36,27 @@ header {
 
 main {
     grid-area: main;
-    display: flex;
-    flex-direction: column;
-    gap: 5.5rem;
+    display: grid;
 
     @media screen and (min-width: 48rem) {
-        //gap: 5.5rem;
-    }
-    &>.wrapper-intro {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        @media screen and (min-width: 48rem) {
-            flex-grow: 1;
-        }
+        grid-template-rows: auto 1fr;
     }
     &>.wrapper-contact {
         @media screen and (min-width: 48rem) {
-            color: $clr-accent;
+            color: $clr-white;
+            align-self: end;
         }
+    }
+}
+
+.wrapper-contact-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    @media screen and (min-width: 48rem) {
+        grid-template-columns: 10rem 10rem;
+        grid-template-rows: 3rem 3rem;
+        grid-auto-flow: column;
+        column-gap: 3rem;
     }
 }
 

@@ -81,7 +81,7 @@ a:hover {
     inset-block-start: -50%; //from top
     inline-size: 40px; //physical width
     block-size: 100%; //physical height
-    border-block-end: 1px solid $clr-gray-lt;
+    border-block-end: 1px solid currentColor;
 }
 
 .text-logo,
@@ -103,5 +103,4 @@ h2.text-title::before {
 .text-social::after {
     @include line();
     margin-inline-start: 16px;
-    border-block-end-color: $clr-white;
 }

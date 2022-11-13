@@ -72,23 +72,31 @@ header {
 
 main {
   grid-area: main;
-  display: flex;
-  flex-direction: column;
-  gap: 5.5rem;
-}
-main > .wrapper-intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
 }
 @media screen and (min-width: 48rem) {
-  main > .wrapper-intro {
-    flex-grow: 1;
+  main {
+    grid-template-rows: auto 1fr;
   }
 }
 @media screen and (min-width: 48rem) {
   main > .wrapper-contact {
-    color: #9D1E1E;
+    color: #FFFFFF;
+    align-self: end;
+  }
+}
+
+.wrapper-contact-info {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 48rem) {
+  .wrapper-contact-info {
+    grid-template-columns: 10rem 10rem;
+    grid-template-rows: 3rem 3rem;
+    grid-auto-flow: column;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
   }
 }
 
@@ -224,8 +232,8 @@ h2.text-title::before {
   inset-block-start: -50%;
   inline-size: 40px;
   block-size: 100%;
-  -webkit-border-after: 1px solid #707070;
-          border-block-end: 1px solid #707070;
+  -webkit-border-after: 1px solid currentColor;
+          border-block-end: 1px solid currentColor;
   -webkit-margin-start: -48px;
           margin-inline-start: -48px;
 }
@@ -236,11 +244,10 @@ h2.text-title::before {
   inset-block-start: -50%;
   inline-size: 40px;
   block-size: 100%;
-  -webkit-border-after: 1px solid #707070;
-          border-block-end: 1px solid #707070;
+  -webkit-border-after: 1px solid currentColor;
+          border-block-end: 1px solid currentColor;
   -webkit-margin-start: 16px;
           margin-inline-start: 16px;
-  border-block-end-color: #FFFFFF;
 }
 
 .sr-only {
