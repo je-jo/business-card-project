@@ -1,47 +1,77 @@
-.text-logo {
-    color: $clr-black;
-    font-size: 1rem;
-    font-weight: bold;
+h1 {
+    font-size: $fs-heading1;
+    font-weight: 700;
+
+    .text-header {
+        font-family: $ff-serif;
+    }
+
+    .text-subtitle {
+        display: block;
+        font-size: 1.1875rem;
+        margin-top: 1rem;
+    }
 }
 
-.text-lead {
-    display: block;
-    font-family: $ff-sans-serif;
-    color: $clr-primary;
-    font-size: 18px;
+h2 {
+    font-size: $fs-heading2;
+    font-weight: 700;
+    line-height: 19px;
 }
 
-h1 .text-header {
-    font-family: $ff-serif;
-    font-size: 48px;
-    font-weight: bold;
-    color: #000000CC;
+h3 {
+    font-size: $fs-heading2;
+    font-weight: 700;
+    margin: 1rem 0;
+    line-height: 20.20px;
 }
 
-.text-subtitle {
-    display: block;
-    font-size: 19px;
-}
-
-.text-para,
-address>a {
-    all: unset;
-    font-style: normal;
-    color: inherit;
+p {
+    font-size: $fs-text;
     font-weight: 300;
-    font-size: 17px;
+    line-height: 19.125px;
+    max-width: 35ch;
+    &.text-para {
+        margin: 12px 0;
+        line-height: 1.2;
+    }
+    &.text-logo {
+        font-size: $fs-heading2;
+        color: $clr-black;
+        font-weight: 700;
+    }
+    &.text-lead {
+        font-size: $fs-lead;
+        color: $clr-primary;
+        font-weight: 500;
+        line-height: 22.5px;
+    }
+    &.text-social {
+        color: $clr-white;
+        font-weight: 700;
+        line-height: 19px;
+    }
 }
 
-.text-title {
-    font-size: 18px;
-    font-weight: normal;
+
+
+// .wrapper-contact>* {
+//     color: yellow;
+// }
+
+
+a {
+    color: inherit;
+    font-style: normal;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.text-find {
-    color: $clr-white;
+a:hover {
+    color: $clr-accent;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
-
-
 
 //Line
 
@@ -51,8 +81,7 @@ address>a {
     inset-block-start: -50%; //from top
     inline-size: 40px; //physical width
     block-size: 100%; //physical height
-    border-block-end: 1px solid #707070;
-    //background-color: yellow;
+    border-block-end: 1px solid $clr-gray-lt;
 }
 
 .text-logo,
@@ -61,7 +90,7 @@ h2.text-title {
     margin-inline-start: 48px;
 }
 
-.text-find {
+.text-social {
     position: relative;
 }
 
@@ -71,13 +100,8 @@ h2.text-title::before {
     margin-inline-start: -48px;
 }
 
-.text-find::after {
+.text-social::after {
     @include line();
     margin-inline-start: 16px;
+    border-block-end-color: $clr-white;
 }
-
-
-
-
-
-

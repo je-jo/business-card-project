@@ -48,14 +48,14 @@ body {
   padding: 2.125rem 1.5rem 48px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 100%;
-  line-height: 1.5;
   text-rendering: optimizeSpeed;
-  background: transparent url(../images/bg-mobile.svg) 0% 0%/cover no-repeat;
+  color: rgba(0, 0, 0, 0.8);
+  background: transparent url(../images/bg-mobile.svg) center center/cover no-repeat;
 }
 @media screen and (min-width: 48rem) {
   body {
     padding: 3.75rem 5.25rem;
-    background: transparent url(../images/bg-desktop.svg) 0% 0%/cover no-repeat;
+    background: transparent url(../images/bg-desktop.svg) center center/cover no-repeat;
     grid-template: "header footer" auto "main footer" 1fr/1fr auto;
   }
 }
@@ -76,9 +76,19 @@ main {
   flex-direction: column;
   gap: 5.5rem;
 }
+main > .wrapper-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 @media screen and (min-width: 48rem) {
-  main {
-    gap: 9.3rem;
+  main > .wrapper-intro {
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 48rem) {
+  main > .wrapper-contact {
+    color: #9D1E1E;
   }
 }
 
@@ -105,20 +115,21 @@ footer {
 
 .wrapper-social {
   display: flex;
-  gap: 3rem;
+  justify-content: space-between;
 }
 @media screen and (min-width: 48rem) {
   .wrapper-social {
     text-align: right;
     -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
+    gap: 5rem;
   }
 }
 
 ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .attribution {
@@ -129,47 +140,70 @@ ul {
   text-align: center;
 }
 
-.text-logo {
-  color: #000000;
-  font-size: 1rem;
-  font-weight: bold;
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
 }
-
-.text-lead {
-  display: block;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #1E9D9D;
-  font-size: 18px;
-}
-
 h1 .text-header {
   font-family: serif;
-  font-size: 48px;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.8);
 }
-
-.text-subtitle {
+h1 .text-subtitle {
   display: block;
-  font-size: 19px;
+  font-size: 1.1875rem;
+  margin-top: 1rem;
 }
 
-.text-para,
-address > a {
-  all: unset;
-  font-style: normal;
-  color: inherit;
+h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  line-height: 20.2px;
+}
+
+p {
+  font-size: 1.0625rem;
   font-weight: 300;
-  font-size: 17px;
+  line-height: 19.125px;
+  max-width: 35ch;
 }
-
-.text-title {
-  font-size: 18px;
-  font-weight: normal;
+p.text-para {
+  margin: 12px 0;
+  line-height: 1.2;
 }
-
-.text-find {
+p.text-logo {
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 700;
+}
+p.text-lead {
+  font-size: 1.125rem;
+  color: #1E9D9D;
+  font-weight: 500;
+  line-height: 22.5px;
+}
+p.text-social {
   color: #FFFFFF;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+a {
+  color: inherit;
+  font-style: normal;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #9D1E1E;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .text-logo,
@@ -179,7 +213,7 @@ h2.text-title {
           margin-inline-start: 48px;
 }
 
-.text-find {
+.text-social {
   position: relative;
 }
 
@@ -196,7 +230,7 @@ h2.text-title::before {
           margin-inline-start: -48px;
 }
 
-.text-find::after {
+.text-social::after {
   content: "";
   position: absolute;
   inset-block-start: -50%;
@@ -206,6 +240,7 @@ h2.text-title::before {
           border-block-end: 1px solid #707070;
   -webkit-margin-start: 16px;
           margin-inline-start: 16px;
+  border-block-end-color: #FFFFFF;
 }
 
 .sr-only {

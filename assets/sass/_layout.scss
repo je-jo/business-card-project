@@ -11,14 +11,14 @@ body {
     padding: 2.125rem 1.5rem 48px;
     font-family: $ff-sans-serif;
     font-size: 100%;
-    line-height: 1.5;
     text-rendering: optimizeSpeed;
-    background: transparent url(../images/bg-mobile.svg) 0% 0%/cover no-repeat;
+    color: $clr-gray-dk;
+    background: transparent url(../images/bg-mobile.svg) center center/cover no-repeat;
 
     @media screen and (min-width: 48rem) {
         padding: 3.75rem 5.25rem;
         // padding: 3.75rem 1.5rem;
-        background: transparent url(../images/bg-desktop.svg) 0% 0%/cover no-repeat;
+        background: transparent url(../images/bg-desktop.svg) center center/cover no-repeat;
         grid-template:
             "header footer" auto
             "main footer" 1fr / 1fr auto;
@@ -41,7 +41,20 @@ main {
     gap: 5.5rem;
 
     @media screen and (min-width: 48rem) {
-        gap: 9.3rem;
+        //gap: 5.5rem;
+    }
+    &>.wrapper-intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media screen and (min-width: 48rem) {
+            flex-grow: 1;
+        }
+    }
+    &>.wrapper-contact {
+        @media screen and (min-width: 48rem) {
+            color: $clr-accent;
+        }
     }
 }
 
@@ -68,19 +81,22 @@ footer {
 
 .wrapper-social {
     display: flex;
-    gap: 3rem;
+    justify-content: space-between;
 
     @media screen and (min-width: 48rem) {
         text-align: right;
         writing-mode: vertical-rl;
+        gap: 5rem;
     }
 }
 
 ul {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.5rem;
 }
+
+
 
 .attribution {
     position: absolute;
