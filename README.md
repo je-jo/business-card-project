@@ -59,6 +59,7 @@ Additional requirements:
 
 - [nucliweb/image-element](https://github.com/nucliweb/image-element) - A repo showing best practices for web images.
 - [CSS Logical Properties and Values](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties) - If writing mode is changed, logical properties must be used instead of physical.
+- [Fluid typography calculator](https://royalfig.github.io/fluid-typography-calculator/)
 
 ## Author
 

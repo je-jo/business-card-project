@@ -41,6 +41,7 @@ main {
     @media screen and (min-width: 48rem) {
         grid-template-rows: auto 1fr;
     }
+
     &>.wrapper-contact {
         @media screen and (min-width: 48rem) {
             color: $clr-white;
@@ -52,6 +53,7 @@ main {
 .wrapper-contact-info {
     display: grid;
     grid-template-columns: 1fr;
+
     @media screen and (min-width: 48rem) {
         grid-template-columns: 10rem 10rem;
         grid-template-rows: 3rem 3rem;
@@ -98,13 +100,14 @@ ul {
     gap: 1.5rem;
 }
 
-
-
 .attribution {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    text-align: center;
+    padding-left: 1.5rem;
     color: $clr-white;
+    @media screen and (min-width: 48rem) {
+        padding-left: 5.25rem;
+    }
 }
