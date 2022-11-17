@@ -1,3 +1,9 @@
+@mixin focus-styles {
+    outline: 3px dotted $clr-accent;
+    outline-offset: 4px;
+    transition: all ease-in 0.2s;
+}
+
 *,
 *::before,
 *::after {
@@ -7,12 +13,14 @@
 * {
     margin: 0;
     padding: 0;
-   // outline: 1px solid salmon;
+    // outline: 1px solid salmon;
     &:focus-visible {
-        outline: 6px solid blue;
-        outline-offset: 2px;
-        transition: all ease-in 1s;
+        @include focus-styles();
     }
+}
+
+a:focus img {
+    @include focus-styles();
 }
 
 html {

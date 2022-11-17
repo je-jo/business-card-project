@@ -1,25 +1,41 @@
 @font-face {
-    font-family: "Asul";
-    src: url(../fonts/Asul-Bold.ttf);
+    font-family: 'Asul';
+    font-style: normal;
     font-weight: 700;
+    src: local(''),
+        url('../fonts/asul-v19-latin-700.woff2') format('woff2'),
+        url('../fonts/asul-v19-latin-700.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "Figtree";
-    src: url(../fonts/Figtree-Bold.ttf);
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: "Figtree";
-    src: url(../fonts/Figtree-Medium.ttf);
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: "Figtree";
-    src: url(../fonts/Figtree-Light.ttf);
+    font-family: 'Figtree';
+    font-style: normal;
     font-weight: 300;
+    src: local(''),
+        url('../fonts/figtree-v1-latin-300.woff2') format('woff2'),
+        url('../fonts/figtree-v1-latin-300.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('../fonts/figtree-v1-latin-500.woff2') format('woff2'),
+        url('../fonts/figtree-v1-latin-500.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('../fonts/figtree-v1-latin-700.woff2') format('woff2'),
+        url('../fonts/figtree-v1-latin-700.woff') format('woff');
+    font-display: swap;
 }
 
 h1,
@@ -90,12 +106,12 @@ p {
 
 a {
     color: inherit;
-    font-style: normal;
     text-decoration: none;
     cursor: pointer;
 }
 
 address>a {
+    font-style: normal;
     font-weight: 300;
 }
 
@@ -103,6 +119,14 @@ a:hover {
     color: $clr-accent;
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+a img:hover {
+    filter: drop-shadow(0px 0px 4px $clr-accent);
+}
+
+small {
+    font-size: 0.7rem;
 }
 
 //Line

@@ -1,6 +1,6 @@
 # BigsonDev - Business Card Project
 
-This is a solution to the [BigsonDev Business Card Project](https://bigsondev.com/projects/business-card-project/). 
+This is a solution to the [BigsonDev Business Card Project](https://bigsondev.com/projects/business-card-project/). BigsonDev site offers free access to Adobe XD designs for front-end development practice.
 
 ## Table of contents
 
@@ -29,8 +29,8 @@ Additional requirements:
 
 - [x] Users can click on the email and the email client will open.
 - [x] Users can click on phone and it'll start the call (on a mobile device).
-- [] Best to introduce icons next to text for the above.
-- [] Introduce e.g. Fade In animation.
+- [ ] Best to introduce icons next to text for the above. Skipped out on this, it would be cluttered.
+- [ ] Introduce e.g. Fade In animation.
 
 ### Screenshot
 
@@ -53,13 +53,17 @@ Additional requirements:
 
 ### Observations
 
-- ...
+This deceptively simple page has some unique layout challenges. I especially liked the footer that goes from horizontal on small screens to vertical on large screens. 
+This was supposed to be a project to practice SASS, but I also took time to look into web performance, inspired by [this great writeup](https://github.com/achaverrar/frontend-mentor-challenges/blob/main/product-preview-card-component/README.md) of a front-end process by @achaverrar.
 
-### Useful resources
+### Useful resources and tools
 
 - [nucliweb/image-element](https://github.com/nucliweb/image-element) - A repo showing best practices for web images.
+- [squoosh](https://squoosh.app/) - Image optimizer for the web.
+- [google-webfonts-helper](http://google-webfonts-helper.herokuapp.com/fonts) - A Hassle-Free Way to Self-Host Google Fonts.
+- [Fluid typography calculator](https://royalfig.github.io/fluid-typography-calculator/);
 - [CSS Logical Properties and Values](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties) - If writing mode is changed, logical properties must be used instead of physical.
-- [Fluid typography calculator](https://royalfig.github.io/fluid-typography-calculator/)
+- [Favicon Generator](https://favicon.io/favicon-generator/);
 
 ## Author
 

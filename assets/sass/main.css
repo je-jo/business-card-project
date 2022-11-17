@@ -9,9 +9,15 @@
   padding: 0;
 }
 *:focus-visible {
-  outline: 6px solid blue;
-  outline-offset: 2px;
-  transition: all ease-in 1s;
+  outline: 3px dotted #c9c927;
+  outline-offset: 4px;
+  transition: all ease-in 0.2s;
+}
+
+a:focus img {
+  outline: 3px dotted #c9c927;
+  outline-offset: 4px;
+  transition: all ease-in 0.2s;
 }
 
 html {
@@ -156,23 +162,31 @@ ul {
 
 @font-face {
   font-family: "Asul";
-  src: url(../fonts/Asul-Bold.ttf);
+  font-style: normal;
   font-weight: 700;
+  src: local(""), url("../fonts/asul-v19-latin-700.woff2") format("woff2"), url("../fonts/asul-v19-latin-700.woff") format("woff");
+  font-display: swap;
 }
 @font-face {
   font-family: "Figtree";
-  src: url(../fonts/Figtree-Bold.ttf);
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Figtree";
-  src: url(../fonts/Figtree-Medium.ttf);
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Figtree";
-  src: url(../fonts/Figtree-Light.ttf);
+  font-style: normal;
   font-weight: 300;
+  src: local(""), url("../fonts/figtree-v1-latin-300.woff2") format("woff2"), url("../fonts/figtree-v1-latin-300.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/figtree-v1-latin-500.woff2") format("woff2"), url("../fonts/figtree-v1-latin-500.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/figtree-v1-latin-700.woff2") format("woff2"), url("../fonts/figtree-v1-latin-700.woff") format("woff");
+  font-display: swap;
 }
 h1,
 h2,
@@ -223,7 +237,7 @@ p.text-logo {
 p.text-lead {
   font-size: 1.125rem;
   font-size: clamp(1.125rem, 1.1rem + 0.125vw, 1.25rem);
-  color: #1E9D9D;
+  color: #1F9E9E;
   font-weight: 500;
   line-height: 22.5px;
 }
@@ -235,19 +249,27 @@ p.text-social {
 
 a {
   color: inherit;
-  font-style: normal;
   text-decoration: none;
   cursor: pointer;
 }
 
 address > a {
+  font-style: normal;
   font-weight: 300;
 }
 
 a:hover {
-  color: #9D1E1E;
+  color: #c9c927;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+a img:hover {
+  filter: drop-shadow(0px 0px 4px #c9c927);
+}
+
+small {
+  font-size: 0.7rem;
 }
 
 .text-logo,
