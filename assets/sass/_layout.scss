@@ -8,7 +8,8 @@ body {
     min-height: 100vh;
     width: min(100%, 80rem);
     margin: 0 auto;
-    padding: 2.125rem 1.5rem 48px;
+    padding: $spacing-m $spacing-s;
+    padding: $spacing-body-vertical $spacing-body-horizontal;
     font-family: $ff-sans-serif;
     font-size: 100%;
     text-rendering: optimizeSpeed;
@@ -16,8 +17,6 @@ body {
     background: transparent url(../images/bg-mobile.svg) bottom center/cover no-repeat;
 
     @media screen and (min-width: 48rem) {
-        padding: 3.75rem 5.25rem;
-        // padding: 3.75rem 1.5rem;
         background: transparent url(../images/bg-desktop.svg) bottom center/cover no-repeat;
         grid-template:
             "header footer" auto
@@ -27,11 +26,7 @@ body {
 
 header {
     grid-area: header;
-    padding-bottom: 3.25rem;
-
-    @media screen and (min-width: 48rem) {
-        padding-bottom: 7rem;
-    }
+    padding-bottom: $spacing-header-bottom;
 }
 
 main {
@@ -53,12 +48,9 @@ main {
 .wrapper-contact-info {
     display: grid;
     grid-template-columns: 1fr;
-
     @media screen and (min-width: 48rem) {
-        grid-template-columns: 10rem 10rem;
-        grid-template-rows: 3rem 3rem;
-        grid-auto-flow: column;
-        column-gap: 3rem;
+        grid-template-columns: repeat(2, 10rem);
+        column-gap: $spacing-l;
     }
 }
 
@@ -89,14 +81,14 @@ footer {
     @media screen and (min-width: 48rem) {
         text-align: right;
         writing-mode: vertical-rl;
-        gap: 5rem;
+        gap: $spacing-xl;
     }
 }
 
 ul {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: $spacing-s;
 }
 
 .attribution {
@@ -104,9 +96,6 @@ ul {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding-left: 1.5rem;
+    padding-left: $spacing-body-horizontal;
     color: $clr-white;
-    @media screen and (min-width: 48rem) {
-        padding-left: 5.25rem;
-    }
 }

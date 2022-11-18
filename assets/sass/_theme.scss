@@ -18,6 +18,17 @@ $fs-subtitle: 1.1875rem;
 $fs-text: 1.0625rem;
 $fs-lead: 1.125rem;
 
+//Spacing
+$spacing-s: 1.5rem;
+$spacing-m: 2.125rem;
+$spacing-l: 3rem;
+$spacing-xl: 5rem;
+$spacing-body-horizontal: clamp($spacing-s, 0.75rem + 3.75vw, 5.25rem);
+$spacing-body-vertical: clamp($spacing-m, 1.8rem + 1.625vw, 3.75rem);
+$spacing-header-bottom: clamp(3.25rem, 2.5rem + 3.75vw, 7rem);
+
+
+
 
 
 

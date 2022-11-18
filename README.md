@@ -29,8 +29,8 @@ Additional requirements:
 
 - [x] Users can click on the email and the email client will open.
 - [x] Users can click on phone and it'll start the call (on a mobile device).
-- [ ] Best to introduce icons next to text for the above. Skipped out on this, it would be cluttered.
-- [ ] Introduce e.g. Fade In animation.
+- [ ] Best to introduce icons next to text for the above. (Skipped out on this, design would become cluttered.)
+- [x] Introduce e.g. Fade In animation.
 
 ### Screenshot
 
@@ -54,7 +54,7 @@ Additional requirements:
 ### Observations
 
 This deceptively simple page has some unique layout challenges. I especially liked the footer that goes from horizontal on small screens to vertical on large screens. 
-This was supposed to be a project to practice SASS, but I also took time to look into web performance, inspired by [this great writeup](https://github.com/achaverrar/frontend-mentor-challenges/blob/main/product-preview-card-component/README.md) of a front-end process by @achaverrar.
+This was supposed to be a project to practice SASS, but I also took time to look into web performance, inspired by [this great writeup](https://github.com/achaverrar/frontend-mentor-challenges/blob/main/product-preview-card-component/README.md) of a front-end process by [@achaverrar](https://github.com/achaverrar).
 
 ### Useful resources and tools
 
@@ -63,6 +63,7 @@ This was supposed to be a project to practice SASS, but I also took time to look
 - [google-webfonts-helper](http://google-webfonts-helper.herokuapp.com/fonts) - A Hassle-Free Way to Self-Host Google Fonts.
 - [Fluid typography calculator](https://royalfig.github.io/fluid-typography-calculator/);
 - [CSS Logical Properties and Values](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties) - If writing mode is changed, logical properties must be used instead of physical.
+- [Animista](https://animista.net/) - CSS animation library
 - [Favicon Generator](https://favicon.io/favicon-generator/);
 
 ## Author
