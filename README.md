@@ -54,7 +54,7 @@ Additional requirements:
 ### Observations
 
 This deceptively simple page has some unique layout challenges. I especially liked the footer that goes from horizontal on small screens to vertical on large screens. 
-This was supposed to be a project to practice SASS, but I also took time to look into web performance, inspired by [this great writeup](https://github.com/achaverrar/frontend-mentor-challenges/blob/main/product-preview-card-component/README.md) of a front-end process by [@achaverrar](https://github.com/achaverrar).
+It was supposed to be a project to practice SASS, but I also took time to look into web performance, inspired by [this great writeup](https://github.com/achaverrar/frontend-mentor-challenges/blob/main/product-preview-card-component/README.md) of a front-end process by [@achaverrar](https://github.com/achaverrar). The page now has a Lighthouse score of 100! 
 
 ### Useful resources and tools
 
